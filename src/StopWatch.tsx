@@ -43,7 +43,7 @@ export default function Stopwatch() {
 
   return (
     <div className="stopwatch-container">
-      {/* Display the formatted time */}
+      <h1 className="stopwatch-heading">Stopwatch ⏱</h1> {/* Heading added */}
       <h2 className="stopwatch-display">{formatTime(time)}</h2>
       <div className="buttons-container">
         <StopwatchButton
@@ -53,10 +53,9 @@ export default function Stopwatch() {
           handleLap={handleLap}
         />
       </div>
-      {/* Map over laps and display them */}
-      <div>
+      <div className="laps-container">
         {laps.map((lap, index) => (
-          <p key={index}>
+          <p className="lap" key={index}>
             Lap {index + 1}: {formatTime(lap)}
           </p>
         ))}

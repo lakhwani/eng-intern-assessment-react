@@ -1,40 +1,68 @@
-/* Add this CSS to your main CSS file, or include it in a <style> tag in your component if you're using styled-components or a similar CSS-in-JS library */
+/* Base styles for body to apply a modern look */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .stopwatch-container {
-  background-color: #ffa500; /* Adjust the color to match your design */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 500px; /* Adjust width as necessary */
+  background-color: #eceff1; /* Neutral grey background */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px; /* Adjusted width for better layout */
   margin: auto;
+  text-align: center;
+}
+
+.stopwatch-heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .stopwatch-display {
-  font-family: "Arial", sans-serif; /* Use a monospaced font if preferred */
-  color: white;
-  font-size: 2em; /* Adjust size as necessary */
-  margin-bottom: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+  font-size: 3rem; /* Larger font size for the main display */
+  margin-bottom: 50px;
 }
 
 .buttons-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; /* Centering buttons */
 }
 
 .stopwatch-button {
-  background-color: #008000; /* Adjust the color to match your design */
+  background-color: #607d8b; /* Muted button color */
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin: 0 5px;
+  padding: 12px 30px; /* Larger padding for a touch-friendly design */
+  margin: 0 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: transform 0.1s ease-in-out;
 }
 
 .stopwatch-button:hover {
-  background-color: #006400; /* Darker shade for hover effect */
+  background-color: #455a64; /* Slightly darker on hover */
+  transform: scale(1.05); /* Subtle grow effect on hover */
 }
 
-/* Ensure you add the corresponding class names to your React components */
+.laps-container {
+  margin-top: 30px;
+}
+
+.lap {
+  background-color: #cfd8dc; /* Slight background for laps */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 type StopwatchButtonProps = {
   // Function to handle the start button click
@@ -20,13 +21,21 @@ export default function StopwatchButton({
   return (
     <div>
       {/* Button to start the stopwatch */}
-      <button onClick={handleStart}>Start</button>
+      <button className="stopwatch-button" onClick={handleStart}>
+        Start
+      </button>
       {/* Button to stop the stopwatch */}
-      <button onClick={handleStop}>Stop</button>
+      <button className="stopwatch-button" onClick={handleStop}>
+        Stop
+      </button>
       {/* Button to record a lap time */}
-      <button onClick={handleLap}>Lap</button>
+      <button className="stopwatch-button" onClick={handleLap}>
+        Lap
+      </button>
       {/* Button to reset the stopwatch */}
-      <button onClick={handleReset}>Reset</button>
+      <button className="stopwatch-button" onClick={handleReset}>
+        Reset
+      </button>
     </div>
   );
 }

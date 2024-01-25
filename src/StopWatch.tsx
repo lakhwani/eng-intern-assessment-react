@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StopwatchButton from "./StopWatchButton";
+import "./styles.css";
 
 export default function Stopwatch() {
   // State for tracking time in milliseconds
@@ -41,16 +42,17 @@ export default function Stopwatch() {
   const handleLap = () => setLaps([...laps, time]);
 
   return (
-    <div>
+    <div className="stopwatch-container">
       {/* Display the formatted time */}
-      <h2>{formatTime(time)}</h2>
-      {/* Pass event handlers to the StopwatchButton component */}
-      <StopwatchButton
-        handleStart={handleStart}
-        handleStop={handleStop}
-        handleReset={handleReset}
-        handleLap={handleLap}
-      />
+      <h2 className="stopwatch-display">{formatTime(time)}</h2>
+      <div className="buttons-container">
+        <StopwatchButton
+          handleStart={handleStart}
+          handleStop={handleStop}
+          handleReset={handleReset}
+          handleLap={handleLap}
+        />
+      </div>
       {/* Map over laps and display them */}
       <div>
         {laps.map((lap, index) => (

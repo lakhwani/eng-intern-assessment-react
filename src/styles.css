@@ -1,0 +1,40 @@
+/* Add this CSS to your main CSS file, or include it in a <style> tag in your component if you're using styled-components or a similar CSS-in-JS library */
+
+.stopwatch-container {
+  background-color: #ffa500; /* Adjust the color to match your design */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 500px; /* Adjust width as necessary */
+  margin: auto;
+}
+
+.stopwatch-display {
+  font-family: "Arial", sans-serif; /* Use a monospaced font if preferred */
+  color: white;
+  font-size: 2em; /* Adjust size as necessary */
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stopwatch-button {
+  background-color: #008000; /* Adjust the color to match your design */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stopwatch-button:hover {
+  background-color: #006400; /* Darker shade for hover effect */
+}
+
+/* Ensure you add the corresponding class names to your React components */
